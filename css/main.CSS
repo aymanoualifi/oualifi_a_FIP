@@ -1,0 +1,397 @@
+/*
+Style Name: Site Build 
+Description: Class File
+Author: ayman oualifi
+Version: 1.0
+Tags: Let's Build Something!
+*/
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* ___________________________________________
+
+       CSS Guide
+___________________________________________ */
+
+/* 01. General Styles
+       - Reset
+       - Global
+         - General
+         - Floats
+         - Brand Colors
+         - Font Awesome                       
+   02. CSS Grid
+   03. Site Header
+       - Header
+       - Nav
+   04. Hero
+       - Image
+       - Title
+   05. Floats                       
+/* _____________________________________
+
+/* _____________________________________
+
+   01. General Styles
+   _____________________________________ */
+
+/* -------------
+  Reset
+-------------*/
+
+   body {
+      margin: 0;
+      padding: 0;
+      color: #626262;
+      font-family: 'Sanchez', serif;
+   }
+
+   h1, h2, h3, h4, p {
+      margin: 0;
+      padding: 0;
+   }
+   
+/* -------------
+  Global
+-------------*/
+
+   /*------------ General ------------*/
+
+   .hidden {
+    display: none;
+ }
+
+ .border-top {
+    border-top: 1px solid #9a2018;
+    padding-top: 1.5em;
+ }
+
+ .margin-top {
+    margin-top: 1em;
+ }
+
+ .margin-top-2 {
+    margin-top: 2em;
+ }
+
+ .margin-tb {
+    margin: 2em 0em 3em;
+ }
+
+ .margin-left {
+    margin-left: 1em;
+ }
+
+ .margin-bottom {
+    margin-bottom: 2m;
+ }
+
+
+ /*------------ End General ------------*/
+
+ /*------------ Floats ------------*/
+  
+ .f-left {
+    float: left;
+ }
+
+ .f-right {
+    float: right;
+ }
+
+ 
+ /*------------ End Floats ------------*/
+
+ /*------------ Brand Colours ------------*/
+ /*------------ End Brand Colours ------------*/
+
+ .cr-red {
+    color: #9a2018;
+ }
+ 
+ /*------------ Font Awesome ------------*/
+ /*------------ End Font Awesome ------------*/
+
+ .fas {
+    margin-right: .5em;
+    font-size: 4em;
+    color: #9a2018; 
+ }
+
+/* _____________________________________
+
+ 02. CSS Grid
+ _____________________________________ */
+
+ @supports (grid-area: auto) {
+
+    .site {
+       max-width: none;
+    }
+
+    /*------------ Grid Items ------------*/
+
+    .head, .main > *, .foot {
+       display: grid;
+          grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+    }
+    
+    .one-item {
+       display: grid;
+       grid-column: 2 / span 2;
+       grid-template-columns: 1fr;
+    }
+
+    .two-items {
+       display: grid;
+       grid-column: 2 / span 2;
+       grid-template-columns: repeat(2, 1fr);
+       justify-content: space-evenly;
+       row-gap: 2em;
+       column-gap: 2em;
+    }
+
+    .three-items {
+       display: grid;
+       grid-column: 2 / span 2;
+       grid-template-columns: repeat(3, 1fr);
+       justify-content: space-evenly;
+       row-gap: 2em;
+       column-gap: 2em;
+    }
+
+    .contact-override{
+       display: grid;
+       grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+       grid-column: 1 / span 4;
+       background-color: #f4f4f4;
+       border-bottom: 1px solid #ccc;
+    }   
+/*------------ classes------------*/
+    }
+    .image-list-small {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 3 auto;
+        text-align: center;
+        max-width: 640px;
+        padding: 0;
+      }
+
+      .image-list-small li {
+        display: inline-block;
+        width: 181px;
+        margin: 0 12px 30px;
+      }
+
+      .image-list-small li > a {
+        display: block;
+        text-decoration: none;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 137px;
+        margin: 1em;
+        padding: 1em;
+        border: 4px solid #ffffff;
+        outline: 1px solid #d0d0d0;
+        box-shadow: 0 2px 1px #DDD;
+        transition: .25s;
+      }
+      .image-list-small li img{
+        width: 100%; 
+        height: auto;
+    }
+    .image-list-small li > a:hover{
+        transform: scale(1.1);
+        transition: .25s;
+    }
+    .image-list-small .details {
+        margin-top: 13px;
+      }
+      .image-list-small .details h3 {
+        display: block;
+        font-size: 14px;
+        margin: 0 0 3px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .image-list-small .details h3 a {
+        color: #303030;
+        text-decoration: none;
+      }
+      .image-list-small .details .image-author {
+        display: block;
+        color: #717171;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+      }
+
+    /*------------ End Grid Items ------------*/
+
+/* _____________________________________
+
+ 03. Site Header
+ _____________________________________ */
+
+   header {
+    position: sticky;
+    top: 0em;
+    background-color: #fff;
+    border-bottom: 1 solid #e6e6e6;
+    box-shadow: 0px 5px 8px #888;
+
+   }
+
+
+    .logo {
+       grid-column: 1 / span 1;
+    }
+
+    .logo img {
+       padding: 1em;
+       width: 30%;
+    }
+
+    /*------------ Start Nav Styling ------------*/
+
+    .nav {
+       grid-column: 2 / span 3;
+       padding-top: 2em;
+       margin: 0;
+    }
+
+    nav ul {
+       margin: 0;
+       padding: 0;
+       text-decoration: none;
+       text-align: end;
+    }
+
+    nav li {
+       display: inline;
+       margin-right: 4em;
+    }
+
+    nav li:last-child{
+       margin-right: 0em;
+   }
+
+   nav li a {
+      color: #626262;
+      font-size: inherit;
+      text-decoration: none;
+   }
+   nav li a:hover{
+      padding-bottom: .5em;
+      border-bottom: 3px solid red;
+   }
+
+   nav li a.active{
+    padding-bottom: .5em;
+    border-bottom: 3px solid red;
+   }
+
+    /*------------- End Site Header ------------*/
+
+/* _____________________________________
+
+ 04. Hero
+ _____________________________________ */
+
+    .hero {
+       margin: 0 0;
+    }
+
+    .hero-img img {
+       width: 100%;
+    }
+
+    .hero-img{
+       display: grid;
+       grid-column: span 4;
+       margin-bottom: 1rem;
+    }
+
+    .hero-img > * {
+       grid-column: 1;
+       grid-row: 1;
+    }
+    /*------------ Title Styles ------------*/
+
+    .hero-img h2, .hero-img h3 {
+       background: #fff;
+       padding: 1em 1.75em;
+       font-size: 1.5em;
+       font-weight: 300;
+       text-align: center;
+    }
+
+    .hero-img h2 span, .faq h2 span, .hero-img h3 span {
+   
+       font-size: 60px;
+       color: red;
+      font-weight: bold;
+     
+    }
+
+    .hero-img h2.left, .hero-img h3.left {
+       align-self: flex-end;
+       justify-self: start;
+       margin-left: 14em;
+       color: seagreen;
+    }
+
+    .hero-img h2.right, .hero-img h3.right {
+       align-self: flex-end;
+       justify-self: end;
+       margin-right: 14em;
+    }
+    .contact-item {
+       padding: 2em;
+    }
+    /*------------ End Hero ------------*/
+.about{
+    margin: 0 auto;
+}
+.about-us{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    width: 700px;
+    display: block;
+    height: auto;
+}
