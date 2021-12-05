@@ -574,6 +574,7 @@ ___________________________________________ */
   .contact-us{
      text-align: center;
      background-color: #9a2018;
+     padding: 7em;
   }
     
 input,textarea{
@@ -582,25 +583,36 @@ input,textarea{
    background-color: #f7f7f7;
    border-radius: 5px;
    width: 448px;
-  margin: 0 38em;
-}
+ }
+
 input[type="submit"] {
   width: inherit;
   padding: 1em 2em;
-  background-color: #9a2018;
-  color: #fff;
+  background-color: white;
+  color: #9a2018;
   border: none;
   float: right;
 }
 .contact-us-form h2 {
-   font-size: 22px;
+   font-size: 28px;
    text-align: center;
-   padding: 4em;
-   margin: -1em 27em;
+   padding: -4em;
    font-weight: bold;
+   color: white;
+ }
+ .contact-us-form p {
+   font-size: 12px;
+   text-align: center;
+   color: gainsboro;
+   display: inline-flex;
+   padding: 1em;
  }
  .contact-us-form2 p {
   text-align: center;
-  padding: 4em;
+ }
+ .contact-us-form2{
+   padding: 0;
+  display: block;
+  padding: 3em;
  }
 }
