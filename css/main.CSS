@@ -597,6 +597,7 @@ input[type="submit"] {
    font-size: 28px;
    text-align: center;
    padding: -4em;
+   margin: 0 8em;
    font-weight: bold;
    color: white;
  }
@@ -605,7 +606,7 @@ input[type="submit"] {
    text-align: center;
    color: gainsboro;
    display: inline-flex;
-   padding: 1em;
+   padding: 4em;
  }
  .contact-us-form2 p {
   text-align: center;
